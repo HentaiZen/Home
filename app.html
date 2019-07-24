@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HentaiZen</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background: #eaebec;
+        }
+
+        #container {
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            margin-left: -167px;
+        }
+
+        #card {
+            width: 325px;
+            height: 490px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="card">
+            <img src="qr-code.png" style="width: 100%;" />
+        </div>
+    </div>
+
+    <script>
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        if (/android/i.test(userAgent) || (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)) {
+            window.location = "exps://app.hentaizen.cf/index.json";
+        }
+    </script>
+</body>
+
+</html>
